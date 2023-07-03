@@ -8,3 +8,5 @@ function changingColorsonTrafficLights() {
       document.getElementById("nextColor").style.backgroundColor = 'red'
   }
 }
+
+setInterval(changingColorsonTrafficLights,10000)
