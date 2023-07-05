@@ -1,12 +1,13 @@
+let btn = document.getElementById("btn");
+let dictionary = ["red", "yellow", "green"];
+let index = 0;
+
 function changingColorsonTrafficLights() {
-  let traficLights = document.getElementById("nextColor").style.backgroundColor
-  if (traficLights === 'red') {
-      document.getElementById("nextColor").style.backgroundColor = 'yellow'
-  } else if (traficLights === 'yellow') {
-      document.getElementById("nextColor").style.backgroundColor = 'green'
-  } else {
-      document.getElementById("nextColor").style.backgroundColor = 'red'
-  }
+    btn.style.backgroundColor = dictionary[index];
+    ++index;
+    if(index == 3) {
+        index = 0;
+    }
 }
 
-setInterval(changingColorsonTrafficLights,10000)
+setInterval(changingColorsonTrafficLights,10000);
